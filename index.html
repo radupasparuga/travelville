@@ -14,7 +14,7 @@
   <title>Travelville</title>
 </head>
 
-<body>
+<body id="home" class="scrollspy">
   <div class="navbar-fixed">
     <nav class="teal">
       <div class="container">
@@ -94,6 +94,19 @@
     </div>
   </section>
 
+  <!-- Section: Search -->
+  <section id="search" class="section section-search teal darken-1 white-text center scrollspy">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h3>Search Destinations</h3>
+          <div class="input-field">
+            <input type="text" class="white grey-text autocomplete" id="autocomplete-input" placeholder="Aruba, Cancun, etc...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!--JavaScript at end of body for optimized loading-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
   <script src="js/script.js"></script>
@@ -109,6 +122,19 @@
       height: 500,
       transition: 500,
       interval: 6000
+    });
+
+    // Autocomplete
+    const ac = document.querySelector('.autocomplete');
+    M.Autocomplete.init(ac, {
+      data: {
+        "Aruba": null,
+        "Cancun Mexico": null,
+        "Hawaii": null,
+        "FLorida": null,
+        "Jamaica": null,
+        "Europe": null,
+      }
     });
   </script>
 </body>
